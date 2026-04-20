@@ -1,3 +1,26 @@
+function setLang(lang) {
+	document.querySelectorAll('.lang-de, .lang-en').forEach(function(el) {
+		el.hidden = !el.classList.contains('lang-' + lang);
+	});
+	document.querySelectorAll('#lang-switch a').forEach(function(a) {
+		a.classList.toggle('active', a.dataset.lang === lang);
+	});
+	document.documentElement.lang = lang;
+	localStorage.setItem('lang', lang);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+	document.querySelectorAll('#lang-switch a').forEach(function(a) {
+		a.addEventListener('click', function(e) {
+			e.preventDefault();
+			setLang(this.dataset.lang);
+		});
+	});
+	var saved = localStorage.getItem('lang');
+	var browserLang = (navigator.language || navigator.userLanguage || 'de').toLowerCase();
+	setLang(saved || (browserLang.startsWith('de') ? 'de' : 'en'));
+});
+
 var body = document.getElementsByTagName("body")[0];
 var vid = document.getElementById("showreel").childNodes[3];
 var vidBtn = document.getElementById("vidBtn");
