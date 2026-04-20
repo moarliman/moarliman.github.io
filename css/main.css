@@ -6,7 +6,7 @@
 html {
 	font-size: 26px;
 	line-height: 34px;
-	letter-spacing: -10%;
+	letter-spacing: -0.05em;
 	font-family: 'Varela Round', sans-serif;
 	color: #6963D9;
 }
