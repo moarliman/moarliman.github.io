@@ -3,7 +3,7 @@ function setLang(lang) {
 		el.hidden = !el.classList.contains('lang-' + lang);
 	});
 	var toggle = document.getElementById('lang-toggle');
-	if (toggle) toggle.textContent = lang === 'de' ? 'en' : 'de';
+	if (toggle) toggle.textContent = lang;
 	document.documentElement.lang = lang;
 	localStorage.setItem('lang', lang);
 }
