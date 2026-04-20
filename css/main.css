@@ -111,19 +111,10 @@ ul {
 	top: 12px;
 	right: 12px;
 	left: auto;
-	font-family: 'Varela Round', sans-serif;
 	font-size: 16px;
-	color: #6963D9;
-	background: none;
-	border: none;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-	cursor: pointer;
+	text-decoration: none;
 	padding: 12px 16px;
-	min-width: 48px;
-	min-height: 48px;
-	line-height: 1;
+	display: block;
 }
 
 /*
