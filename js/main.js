@@ -11,7 +11,8 @@ function setLang(lang) {
 document.addEventListener('DOMContentLoaded', function() {
 	var toggle = document.getElementById('lang-toggle');
 	if (toggle) {
-		toggle.addEventListener('click', function() {
+		toggle.addEventListener('click', function(e) {
+			e.preventDefault();
 			var current = localStorage.getItem('lang') || 'de';
 			setLang(current === 'de' ? 'en' : 'de');
 		});
