@@ -106,6 +106,21 @@ ul {
 
 }
 
+#lang-switch {
+	position: fixed;
+	top: 2%;
+	right: 4%;
+	font-size: 16px;
+}
+
+#lang-switch a {
+	text-decoration: none;
+}
+
+#lang-switch a.active {
+	text-decoration: underline;
+}
+
 /*
   ##Device = Laptops, Desktops
   ##Screen = B/w 1025px to 1280px
